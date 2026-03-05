@@ -20,6 +20,20 @@
             font-size: 40px; 
         }
     </style>
+
+    <script>
+        function change1() {
+            
+            document.getElementById("pic").src = "mountain.jpg";
+            document.getElementById("h2text").innerText = "靜宜資管";
+        }
+
+        function change2() {
+            
+            document.getElementById("pic").src = "cliff.jpg";
+            document.getElementById("h2text").innerText = "Yu-Lun Wei";
+        }
+    </script>
 </head>
 <body>
 
@@ -27,11 +41,13 @@
         <table width="80%" border="0">
             <tr>
                 <td width="70%">
-                    <img src="cliff.jpg" width="100%">
+                    <img src="cliff.jpg" width="100%" id="pic" 
+                         onmouseover="change1()" 
+                         onmouseout="change2()">
                 </td>
                 <td valign="middle" align="center">
                     <h1>魏郁倫</h1>
-                    <h2>Yu-Lun Wei</h2>
+                    <h2 id="h2text">Yu-Lun Wei</h2>
                 </td>
             </tr>
         </table>
